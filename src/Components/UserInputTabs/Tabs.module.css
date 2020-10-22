@@ -1,0 +1,17 @@
+.tabList {  
+  border-bottom: 1px solid #ccc;
+}
+  
+.tabListItem {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+  cursor: default;
+  list-style: none;
+}
+
+.tabListActive {
+  background-color: lightgray;
+}
+

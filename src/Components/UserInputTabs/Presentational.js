@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { addMessage } from '../app/Actions/actions'
+import { addMessage } from '../../app/Actions/actions'
 
 class Presentational extends React.Component {
     constructor(props) {
