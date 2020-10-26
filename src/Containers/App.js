@@ -1,14 +1,18 @@
 import React from 'react';
 import Presentational from '../Components/UserInputTabs/Presentational';
 import UserInputTabs from '../Components/UserInputTabs/UserInputTabs';
-import './App.css';
+import Aside from '../Components/Aside/Aside'
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>He-hei!</h1>
-      {/* <Presentational/> */}
-      <UserInputTabs/>
+      <div className={styles.container}>
+        {/* <Presentational/> */}
+        <Aside/>
+        <UserInputTabs/>
+      </div>
     </div>
   );
 }

@@ -207,3 +207,8 @@ kbd {
   border-radius: 5px;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+

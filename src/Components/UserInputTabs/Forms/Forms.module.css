@@ -1,11 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 80%;
+}
+
 label {
     font-weight: bold;
-    display: flex;
   }
   
   input[type="email"],
   input[type="text"],
-  input[type="number"] {
+  input[type="number"],
+  input[type="password"] {
     padding: 0.65rem 0.5rem;
     font-size: 1rem;
     border: 2px solid var(--gray-200);
@@ -19,8 +28,9 @@ label {
   
   input[type="email"],
   input[type="text"],
+  input[type="password"],
   select {
-    width: 400px;
+    width: 18rem;
   }
   
   select {
@@ -45,6 +55,21 @@ label {
     outline: none;
     border: 2px solid var(--focus-ring-color);
   }
+
+  input.passWeak:focus {
+    border-bottom: 5px solid orange;
+    box-shadow: none;
+  }
+
+  input.passMedium:focus {
+    border-bottom: 5px solid yellowgreen;
+    box-shadow: none;
+  }
+
+  input.passStrong:focus {
+    border-bottom: 5px solid greenyellow;
+    box-shadow: none;
+  }
   
   input:invalid,
   select:invalid {
@@ -52,19 +77,17 @@ label {
     box-shadow: none;
   }
   
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
   button {
     padding: 0.5rem 1.25rem;
+    width: 18rem;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 0.1rem;
     background-color: var(--gray-700);
     border: 2px solid var(--gray-700);
     color: white;
     text-decoration: none;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -77,20 +100,14 @@ label {
     user-select: none;
   }
   
-  @media (hover: hover) {
-    input[type="submit"]:hover,
-    input[type="reset"]:hover,
-    input[type="button"]:hover,
-    button:hover {
-      cursor: pointer;
-      background-color: var(--gray-800);
-    }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: var(--gray-800);
   }
   
-  button:focus-visible,
-  input[type="submit"]:focus-visible,
-  input[type="reset"]:focus-visible,
-  input[type="button"]:focus-visible {
+  
+  button:focus-visible {
     border-color: var(--focus-ring-color);
     outline: none;
   }
@@ -103,24 +120,14 @@ label {
   button + button {
     margin-left: 0.5rem;
   }
-  
-  button.secondary,
-  button[type="reset"] {
-    background-color: var(--gray-300);
-    border: 2px solid var(--gray-300);
-    color: var(--gray-900);
-  }
-  
-  button.secondary:hover,
-  button[type="reset"]:hover {
-    background-color: var(--gray-400);
-  }
 
   .error {
     font-size: 12px;
     color: var(--red-600);
     margin-top: 0.25rem;
   }
+
+  
 
 
   
