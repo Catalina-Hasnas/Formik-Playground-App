@@ -1,5 +1,8 @@
 .tabList {  
   border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
   
 .tabListItem {
@@ -9,6 +12,7 @@
   padding: 0.5rem 0.75rem;
   cursor: default;
   list-style: none;
+  font-size: 1.5rem;
 }
 
 .tabListActive {

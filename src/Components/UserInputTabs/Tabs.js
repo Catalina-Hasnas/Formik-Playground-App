@@ -33,7 +33,7 @@ class Tabs extends Component {
             <ul className={styles.tabList}>
               {children.map((child) => {
                 const { label } = child.props;
-    
+                
                 return (
                   <Tab
                     activeTab={activeTab}
