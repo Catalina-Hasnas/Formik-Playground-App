@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { addMessage } from '../../app/Actions/actions'
+import { addMessage } from '../../../app/Actions/actions'
 
-class Presentational extends React.Component {
+class Contact extends React.Component {
     constructor(props) {
       super(props);
       
       // Remove property 'messages' from Presentational's local state
       this.state = {
-        input: ''
+        input: '',
       }
       this.handleChange = this.handleChange.bind(this);
       this.submitMessage = this.submitMessage.bind(this);
@@ -30,7 +30,7 @@ class Presentational extends React.Component {
     render() {
       return (
         <div>
-          <h2>Type in a new Message:</h2>
+          <p>Type in a new Message:</p>
           <input
             value={this.state.input}
             onChange={this.handleChange}/><br/>
@@ -52,7 +52,7 @@ class Presentational extends React.Component {
   };
 
 const mapStateToProps = (state) => {
-return {messages: state}
+return {messages: state.messages}
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -63,4 +63,4 @@ return {
 }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Presentational);
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);
